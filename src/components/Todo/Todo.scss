@@ -1,0 +1,31 @@
+.todo {
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo span {
+  cursor: pointer;
+}
+
+.todo button {
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  opacity: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.todo:hover > button {
+  opacity: 1;
+}
+.todo:nth-child(2n) {
+  background: #90caf9;
+}
+
+.todo:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
