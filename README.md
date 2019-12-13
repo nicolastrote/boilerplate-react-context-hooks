@@ -3,6 +3,7 @@ Small boilerplate for testing react without redux, but with context and hooks
 
 ## TODO
 * add typescript
+* reducer a part
 
 ## Prior
 * install globally brew, nodejs and yarn:

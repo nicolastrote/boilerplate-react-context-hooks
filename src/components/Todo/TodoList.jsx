@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 
-import Index from '../Todo/index';
+import { Todo } from "./Todo";
 import { Store } from '../../store/Store';
 
-const TodoList = () => {
+export const TodoList = () => {
     const { state, dispatch } = useContext(Store);
 
     const todoList = state.todoList.map((todo) => (
-        <Index
+        <Todo
             key={todo.id}
             todoId={todo.id}
             todoText={todo.text}
@@ -18,5 +18,3 @@ const TodoList = () => {
 
     return <div className="todo-list">{todoList}</div>;
 };
-
-export default TodoList;

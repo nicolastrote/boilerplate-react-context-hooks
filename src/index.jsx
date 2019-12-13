@@ -1,9 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import './index.scss'
-import App from './App'
+import App from './App';
 import { StoreProvider } from './store/Store';
+
+import './index.scss';
 
 const app = (
     <StoreProvider>

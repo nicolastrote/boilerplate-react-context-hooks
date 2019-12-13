@@ -1,0 +1,22 @@
+.TodoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    background: #e3f2fd;
+    margin-bottom: 60px;
+    border-radius: 6px;
+    width: 600px;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 50px 0 36px 0;
+    letter-spacing: 2px;
+    color: #64b5f6;
+  }
+}

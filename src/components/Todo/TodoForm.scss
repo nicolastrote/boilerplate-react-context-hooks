@@ -1,0 +1,36 @@
+.todo-form {
+  display: flex;
+
+  * {
+    font-size: 22.5px;
+    padding: 10px 14px;
+    border-color: #0d47a1;
+  }
+
+  input {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: 1px solid #2196f3;
+    border-right: 0px;
+    color: #0d47a1;
+    flex: 4;
+  }
+
+  input:focus, button:focus {
+    outline: none;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  button {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 1px solid #2196f3;
+    background: #64b5f6;
+    color: #fff;
+    cursor: pointer;
+    flex: 1;
+  }
+}

@@ -1,17 +1,13 @@
-import React from 'react';
+import React from "react";
+import TodoContainer from "./containers/TodoContainer";
 
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
-import './App.scss';
-
-export default function App() {
+const App = () => {
   return (
-      <div className="App">
-        <h1>Todo App</h1>
-        <div>
-          <TodoForm />
-          <TodoList />
-        </div>
+      <div>
+        <h1>Boilerplate React Context Hooks Typescript</h1>
+        <TodoContainer />
       </div>
-  )
-}
+  );
+};
+
+export default App;

@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 
-import { addTodo } from '../../store/Actions';
+import { addTodo } from '../../actions';
 import { Store } from '../../store/Store';
 
 import './TodoForm.scss';
 
-const TodoForm = () => {
+export const TodoForm = () => {
     const { dispatch } = useContext(Store);
     const [todo, setTodo] = useState('');
 
@@ -26,5 +26,3 @@ const TodoForm = () => {
         </form>
     )
 };
-
-export default TodoForm;
