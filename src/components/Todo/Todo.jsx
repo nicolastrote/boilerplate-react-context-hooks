@@ -1,4 +1,6 @@
 import React, { memo } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTrash} from "@fortawesome/free-solid-svg-icons/faTrash";
 
 import { editTag, removeTodo } from '../../actions';
 
@@ -27,7 +29,7 @@ export const Todo = memo(
               <span style={todoStyle} onClick={handleTodoTag}>
                 {todoText}
               </span>
-              <button onClick={handleRemoveTodo}>x</button>
+              <button onClick={handleRemoveTodo}><FontAwesomeIcon icon={faTrash} size="lg"/></button>
              </div>
         )
     }

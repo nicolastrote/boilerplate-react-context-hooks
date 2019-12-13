@@ -7,8 +7,7 @@ import './TodoContainer.scss';
 const TodoContainer = () => {
     return (
         <div className="TodoContainer">
-            <h1>Todo App</h1>
-            <div>
+            <div className="TodoCard">
                 <TodoForm />
                 <TodoList />
             </div>

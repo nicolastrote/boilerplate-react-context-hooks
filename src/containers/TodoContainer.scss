@@ -1,22 +1,19 @@
 .TodoContainer {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  margin: 20% 5%;
   justify-content: center;
-  align-items: center;
 
-  div {
-    background: #e3f2fd;
-    margin-bottom: 60px;
-    border-radius: 6px;
-    width: 600px;
+  @media screen and (min-width: 768px) {
+    flex-flow: row nowrap;
+    justify-content: space-around;
   }
 
-  h1 {
-    font-size: 60px;
-    font-weight: 400;
-    text-transform: capitalize;
-    margin: 50px 0 36px 0;
-    letter-spacing: 2px;
-    color: #64b5f6;
+  .TodoCard {
+    padding: 23px 20px;
+    background: #F2F2F2;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px 0 rgba(73, 89, 101, 0.8);
+    width: 600px;
   }
 }

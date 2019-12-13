@@ -2,9 +2,7 @@
   display: flex;
 
   * {
-    font-size: 22.5px;
     padding: 10px 14px;
-    border-color: #0d47a1;
   }
 
   input {
@@ -14,6 +12,11 @@
     border-right: 0px;
     color: #0d47a1;
     flex: 4;
+    font-size: 16px !important;
+
+    @media screen and (min-width: 768px) {
+      font-size: 22px !important;
+    }
   }
 
   input:focus, button:focus {
@@ -25,12 +28,17 @@
   }
 
   button {
+    flex: 1;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
-    border: 1px solid #2196f3;
-    background: #64b5f6;
     color: #fff;
+    background: #307BFF;
+    border-color: #307BFF;
     cursor: pointer;
-    flex: 1;
+    font-size: 16px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
   }
 }

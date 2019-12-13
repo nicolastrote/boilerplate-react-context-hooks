@@ -4,7 +4,7 @@ import TodoContainer from "./containers/TodoContainer";
 const App = () => {
   return (
       <div>
-        <h1>Boilerplate React Context Hooks Typescript</h1>
+        <h1>Simple Boilerplate React Context Hooks</h1>
         <TodoContainer />
       </div>
   );

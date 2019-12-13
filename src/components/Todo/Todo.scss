@@ -1,31 +1,27 @@
 .todo {
-  padding: 12px 18px;
   display: flex;
   justify-content: space-between;
+  padding: 12px 18px;
   align-items: center;
-}
+  background: white;
+  line-height: 26px;
 
-.todo span {
-  cursor: pointer;
-}
+  span {
+    cursor: pointer;
+  }
 
-.todo button {
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  opacity: 0;
-  background: none;
-  cursor: pointer;
-}
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
 
-.todo:hover > button {
-  opacity: 1;
-}
-.todo:nth-child(2n) {
-  background: #90caf9;
-}
+  &:nth-child(2n) {
+    background: #ccc8fb;
+  }
 
-.todo:last-child {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  &:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
 }

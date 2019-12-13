@@ -1,9 +1,7 @@
 # Simple Boilerplate for React Context and Hooks
 Small boilerplate for testing react without redux, but with context and hooks
 
-## TODO
-* add typescript
-* reducer a part
+![alt text](external-ressources/todoAppMobile.png)
 
 ## Prior
 * install globally brew, nodejs and yarn:
@@ -301,7 +299,49 @@ export default function TodoList() {
 create Todo component
 * cd components/TodoList/ && touch Todo.jsx
 * write Todo.jsx as:
-```typescript jsx
-
 ```
+import React, { memo } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTrash} from "@fortawesome/free-solid-svg-icons/faTrash";
+
+import { editTag, removeTodo } from '../../actions';
+
+import './Todo.scss';
+
+export const Todo = memo(
+    (props) => {
+        const { todoId, todoText, todoTag, dispatch } = props;
+
+        const handleTodoTag = () => {
+            const newTag = todoTag === 'active' ? 'complete' : 'active';
+            editTag(todoId, newTag, dispatch);
+        };
+
+        const handleRemoveTodo = () => {
+            removeTodo(todoId, dispatch)
+        };
+
+        const todoStyle = {
+            color: (todoTag === 'complete' && '#90a4ae') || '#01579b',
+            textDecoration: (todoTag === 'complete' && 'line-through') || 'none',
+        };
+
+        return (
+            <div className="todo">
+              <span style={todoStyle} onClick={handleTodoTag}>
+                {todoText}
+              </span>
+              <button onClick={handleRemoveTodo}><FontAwesomeIcon icon={faTrash} size="lg"/></button>
+             </div>
+        )
+    }
+);
+```
+
+## IMPROVEMENT
+* all architecture moved for an organisation more atomic as container folder, component folder, redux file, action file, store file.
+* use of barrels (ir: index.jsx file in folder)
+* add of react-fontawesome package for icon: `yarn add @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome @fortawesome/fontawesome-svg-core`
+
+
 
